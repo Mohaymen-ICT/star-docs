@@ -1,15 +1,12 @@
 name: Deploy Docusaurus site
 
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types: [deploy_trigger]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
-    needs: build
 
     steps:
       - name: Checkout repository
