@@ -38,3 +38,12 @@ jobs:
         with:
           name: build-artifact
           path: star-docs/build/
+      
+      - name: Trigger deploy workflow
+        if: github.ref == 'refs/heads/main'
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/dispatches \
+            -d '{"event_type":"deploy_trigger"}'
