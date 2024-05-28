@@ -27,12 +27,14 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        working-directory: star-docs
 
       - name: Build site
         run: npm run build
+        working-directory: star-docs
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2
         with:
           name: build-artifact
-          path: build/
+          path: star-docs/build/
