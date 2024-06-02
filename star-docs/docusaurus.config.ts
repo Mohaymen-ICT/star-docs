@@ -89,11 +89,15 @@ const config: Config = {
             style: 'dark',
             links: [
                 {
-                    title: 'Docs',
+                    title: 'مستندات',
                     items: [
                         {
-                            label: 'مستندات',
-                            to: '/docs/intro',
+                            label: 'درباره‌ی واحد',
+                            to: '/team/about-team',
+                        },
+                        {
+                            label: 'شروع به کار',
+                            to: '/onboarding/intro',
                         },
                     ],
                 }
