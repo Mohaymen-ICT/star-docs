@@ -4,5 +4,11 @@
   },
   "websiteTagline": {
     "message": "مستندات ستاره"
+  },
+  "onboarding": {
+    "message": "شروع به کار"
+  },
+  "aboutTeam": {
+    "message": "درباره‌ی واحد"
   }
 }
