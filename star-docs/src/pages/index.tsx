@@ -8,6 +8,7 @@ import {ReactElement} from "react";
 
 import {translate} from '@docusaurus/Translate';
 import Translate from "@docusaurus/core/lib/client/exports/Translate";
+import Link from '@docusaurus/Link';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -28,9 +29,27 @@ export default function Home(): ReactElement {
     <Layout
       description={translate({id: "websiteDescription"})}>
       <HomepageHeader />
-      <main>
-
-      </main>
+        <main className={clsx(styles.mainContainer)}>
+            <div className="container">
+                <p className="hero__subtitle">به مستندات واحد فناوری تحلیل داده خوش آمدید.</p>
+                <div className={styles.buttons}>
+                    <Link
+                        className="button button--secondary button--lg"
+                        to="/team/about-team"
+                    >
+                        <Translate>aboutTeam</Translate>
+                    </Link>
+                </div>
+                <div className={styles.buttons}>
+                    <Link
+                        className="button button--secondary button--lg"
+                        to="/onboarding/intro"
+                    >
+                        <Translate>onboarding</Translate>
+                    </Link>
+                </div>
+            </div>
+        </main>
     </Layout>
   );
 }
