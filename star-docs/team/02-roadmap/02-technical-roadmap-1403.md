@@ -1,5 +1,9 @@
 # نقشه‌ی راه فنی
 
+:::warning
+این یک پیش‌نویس است و به مرور تکمیل می‌گردد.
+:::
+
 - Continuous Delivery
   - فرهنگ Continuous Integration
     - هر روز مرج شدن فیچر برنچ‌ها
