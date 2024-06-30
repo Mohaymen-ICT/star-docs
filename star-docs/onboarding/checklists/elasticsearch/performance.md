@@ -80,6 +80,7 @@
         ```
         GET /_cluster/stats
         ```
+        
         توضیحات خروجی این کوئری در 
         [مستندات الستیک‌سرچ](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-stats.html)
         آمده است.
