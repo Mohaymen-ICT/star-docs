@@ -90,10 +90,19 @@
         ‍‍‍‍```
         GET /_cluster/settings
         ```
-        
+
+        توضیحات خروجی این کوئری در 
+        [مستندات الستیک‌سرچ](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-get-settings.html)
+        آمده است.
+
+
     * بررسی وضعیت شارد‌ها
         برای دریافت وضعیت شاردها از کوئری زیر استفاده می‌شود.
 
         ```
         GET _cat/shards?v
         ```
+
+        توضیحات خروجی این کوئری در 
+        [مستندات الستیک‌سرچ](https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-shards.html)
+        آمده است.       
