@@ -87,14 +87,14 @@
 
     * بررسی تنظیمات کلاستر
         برای دسترسی به تنظیمات کلی کلاستر از کوئری زیر استفاده می‌شود.
-
-        ‍‍‍‍```
+        ```
         GET /_cluster/settings
         ```
 
+
         توضیحات خروجی این کوئری در 
         [مستندات الستیک‌سرچ](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-get-settings.html)
-        آمده است.
+        آمده است.       
 
 
     * بررسی وضعیت شارد‌ها
