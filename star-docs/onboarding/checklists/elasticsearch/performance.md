@@ -118,4 +118,5 @@
 
         ```
         GET /_cat/segments?v
+        GET /_segments
         ```
