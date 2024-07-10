@@ -111,3 +111,11 @@
         توضیحات خروجی این کوئری در 
         [مستندات الستیک‌سرچ](https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-shards.html)
         آمده است.       
+
+    * بررسی وضعیت سگمنت‌ها
+
+        برای دریافت تعداد سگمنت‌ها و وضعیت آن‌ها از کوئری زیر استفاده می‌شود.
+
+        ```
+        GET /_cat/segments?v
+        ```
