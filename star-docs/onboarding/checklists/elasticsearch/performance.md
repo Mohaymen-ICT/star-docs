@@ -111,3 +111,7 @@
         توضیحات خروجی این کوئری در 
         [مستندات الستیک‌سرچ](https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-shards.html)
         آمده است.       
+
+
+## جلسات بررسی تیم فنی
++ [جلسه‌ی اول بررسی روش‌های دیباگ کلاستر الستیک](https://splus.ir/star_learning_dev/286)
