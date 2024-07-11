@@ -47,6 +47,15 @@ const config: Config = {
                 sidebarPath: './sidebarsOnboarding.ts'
             }
         ],
+        [
+            '@docusaurus/plugin-content-docs',
+            {
+                id: 'documents',
+                path: 'documents',
+                routeBasePath: 'documents',
+                sidebarPath: './sidebarsDocuments.ts'
+            }
+        ],
     ],
 
     presets: [
@@ -98,6 +107,10 @@ const config: Config = {
                         {
                             label: 'شروع به کار',
                             to: '/onboarding/intro',
+                        },
+                        {
+                            label: 'مستندات',
+                            to: '/documents/overview',
                         },
                     ],
                 }
