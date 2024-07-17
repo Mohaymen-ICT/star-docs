@@ -115,3 +115,10 @@
 
 ## جلسات بررسی تیم فنی
 + [جلسه‌ی اول بررسی روش‌های دیباگ کلاستر الستیک](https://splus.ir/star_learning_dev/286)
+
+
+## لینک‌های مهم سایت الستیک‌سرچ برای بهینه‌سازی کلاستر
++ [Tune for search speed](https://www.elastic.co/guide/en/elasticsearch/reference/current/tune-for-search-speed.html)
++ [Tune for indexing speed](https://www.elastic.co/guide/en/elasticsearch/reference/current/tune-for-indexing-speed.html)
++ [Tune for disk usage](https://www.elastic.co/guide/en/elasticsearch/reference/current/tune-for-disk-usage.html)
++ [Size your shards](https://www.elastic.co/guide/en/elasticsearch/reference/current/size-your-shards.html)
