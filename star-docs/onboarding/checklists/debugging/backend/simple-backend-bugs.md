@@ -218,7 +218,7 @@ at System.Linq.ThrowHelper.ThrowNoMatchException()
 at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
 ```
 و در کل می‌توان از تابع 
-First
+`First`
 متوجه شد که چه خطی و چه لیستی در کد تابع
 `GetType`
 رخ داده است.
