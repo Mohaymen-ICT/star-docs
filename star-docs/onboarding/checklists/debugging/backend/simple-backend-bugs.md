@@ -159,6 +159,45 @@ stack trace:
 
 در مثال فوق تمام بخش‌ها و لایه‌هایی از کد که منجر به پرتاب شدن آن استثنا شده است نشان داده می‌شود.
 
+برای یافتن نقطه‌ای که خطا رخ‌داده است به درونی‌ترین لایه‌ی 
+StackTrace
+و بالاترین خط آن مراجعه کنید تا دقیقا ریشه‌ی خطا را شناسایی کنید. احتمالا در ادامه‌ی مسیر شناسایی مشکل نیاز به یافتن توابعی که قبلا فراخوانی شده‌اند هم خواهیم داشت.
+
+در مثال فوق درونی‌ترین لایه‌ را شناسایی می‌کنیم.
+
+```
+        - Sequence contains no matching element Exception_AppId: 1b48e161-de6a-4d07-ab1e-a74d0cf4912f, Exception_UniqueId: 36938, Exception_LocalDateTime: 2024-05-15T13:36:01.8017496+03:30, Exception_UTCDateTime: 2024-05-15T10:06:01.8017496Z
+           at System.Linq.ThrowHelper.ThrowNoMatchException()
+           at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+           at LAP.Simorgh.Graph.Completion.Class.AttributeConverter.GetType(Int64 elementId, Int64 attributeId) in /opt/MicroService.LAP.DW/MicroService.IAP/Simorgh/Graph/Completion/Class/AttributeConverter.cs:line 64
+           at LAP.Simorgh.Graph.Completion.Class.AttributeConverter.ConvertAttribute(Int64 elementId, CompletionAttribute attribute) in /opt/MicroService.LAP.DW/MicroService.IAP/Simorgh/Graph/Completion/Class/AttributeConverter.cs:line 51
+           at LAP.Simorgh.Graph.Completion.Class.AttributeConverter.ConvertInstance(CompletionInstance instance) in /opt/MicroService.LAP.DW/MicroService.IAP/Simorgh/Graph/Completion/Class/AttributeConverter.cs:line 38
+           at LAP.Simorgh.Graph.Completion.Class.AttributeConverter.ConvertToRealValue(List`1 instances) in /opt/MicroService.LAP.DW/MicroService.IAP/Simorgh/Graph/Completion/Class/AttributeConverter.cs:line 30
+           at LAP.Simorgh.Graph.Completion.CompletionBusiness.Complete(EventStoreGraphCompletionRequest request, CancellationToken cancellationToken) in /opt/MicroService.LAP.DW/MicroService.IAP/Simorgh/Graph/Completion/CompletionBusiness.cs:line 50
+           at LAP.Simorgh.Graph.Api.EventStoreGraphCompletionApi.Complete(EventStoreGraphCompletionRequest request, CancellationToken cancellationToken) in /opt/MicroService.LAP.DW/MicroService.IAP/Simorgh/Graph/Api/EventStoreGraphCompletionApi.cs:line 36
+           at LAP.Simorgh.Graph.Logic.Completion.CompletionManager.Complete(List`1 instances, CancellationToken cancellationToken) in /opt/MicroService.LAP.DW/MicroService.IAP/Simorgh/Graph/Logic/Completion/CompletionManager.cs:line 61
+           at LAP.Simorgh.Graph.EventStoreGraphProvider.TryComplete(List`1 result, CancellationToken cancellationToken) in /opt/MicroService.LAP.DW/MicroService.IAP/Simorgh/Graph/EventStoreGraphProvider.cs:line 103
+           at LAP.Simorgh.Graph.EventStoreGraphProvider.GetEventStoreGraph(SimorghRequest request, Dictionary`2 keyAttributes, CancellationToken cancellationToken) in /opt/MicroService.LAP.DW/MicroService.IAP/Simorgh/Graph/EventStoreGraphProvider.cs:line 58
+           at LAP.Simorgh.Graph.Api.EventStoreGraphExplorerApi.GetEventStoreGraph(SimorghExplorerRequest request, List`1 keyAttributes, CancellationToken cancellationToken) in /opt/MicroService.LAP.DW/MicroService.IAP/Simorgh/Graph/Api/EventStoreGraphExplorerApi.cs:line 54
+           at (Object, Object[])
+           at Mohaymen.Mrpc.Host.ApiControllerManager.DefaultApiControllerManager.ApiInfo.Invoke(IApiController apiController, Dictionary`2 ordinalParameters, Dictionary`2 nameParameters, Object apiParameter, IClientEventService`1 clientEventService, CancellationToken cancellationToken)
+           at Mohaymen.Mrpc.Host.Service.Processor.ApiControllerServiceProcessorExecute.InvokeApi(RequestMessageServiceInfoExecute requestMessageService, Object content, Type outputType, IClientEventService`1 clientEventService, IApiController apiController, CancellationToken executionCancellationToken)
+```
+
+و بالاترین لایه‌ها مهم و حائذ اهمیت است و به مرور می‌توان به لایه‌های قبلی مراجعه کرد. 
+
+
+```
+        - Sequence contains no matching element Exception_AppId: 1b48e161-de6a-4d07-ab1e-a74d0cf4912f, Exception_UniqueId: 36938, Exception_LocalDateTime: 2024-05-15T13:36:01.8017496+03:30, Exception_UTCDateTime: 2024-05-15T10:06:01.8017496Z
+           at System.Linq.ThrowHelper.ThrowNoMatchException()
+           at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+           at LAP.Simorgh.Graph.Completion.Class.AttributeConverter.GetType(Int64 elementId, Int64 attributeId) in /opt/MicroService.LAP.DW/MicroService.IAP/Simorgh/Graph/Completion/Class/AttributeConverter.cs:line 64
+```
+
+در آخر خط شماره‌ی خط هم مشخص می‌شود اما به دلیل روش ساخت پروژه به صورت
+Release
+دقیق نیست و حدودی است.
+
 با بررسی دقیق روال فراخوانی کلاس‌ها می‌توان محدوده و مشکل را شناسایی کنیم.
 :::warning
 در برخی حالات توابع یک خطی ممکن است در کدهای تولید شده در حالت 
@@ -166,6 +205,19 @@ Release
 حذف شوند و در 
 StackTrace
 نمایش داده نشوند.
+
+به صورت خاص اگر یک مشخصه‌ی خاص به توابع اضافه شود. همیشه آن تابع به صورت
+inline
+کامپایل می‌شود به این معنی که به جای فراخوانی توابع در مکان‌های استفاده کد خاصی کپی می‌شود. 
+
+برای مطالعه‌ی بیش‌تر به
+[این لینک](https://softwareengineering.stackexchange.com/questions/245802/is-there-a-downside-to-using-aggressiveinlining-on-simple-properties)
+مراجعه کنید.
+
+
+البته مشاهده شده در زمانی که توابع یک خطی یا با منطق بسیار کم به تعداد کمی استفاده شده‌اند، کامپایلر به صورت هوشمند آن را 
+inline
+می‌کند و عملا مشابه با تنظیم فوق عمل می‌کند. که ممکن است در حین دیباگ گمراه کننده باشد.
 :::
 
 ### باز تولید باگ
