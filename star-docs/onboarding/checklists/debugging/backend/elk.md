@@ -56,6 +56,412 @@ start
 
 ### ساختار لاگ
 
+یک فایل لاگ به صورت یک جیسون است که شامل کلید و مقادیری است که به تیم فنی امکان درک وقایع در سیستم عملیاتی را می‌دهد.
+
+نمونه‌ی یک فایل لاگ به صورت زیر است.
+
+```json
+{
+  "_index": "star-logs-000007",
+  "_type": "_doc",
+  "_id": "RyLQ3pAB57zJKhoG64Mv",
+  "_score": 1,
+  "fields": {
+    "agent.version.keyword": [
+      "7.17.9"
+    ],
+    "details.status.keyword": [
+      "success"
+    ],
+    "fields.Environment.keyword": [
+      "qa-beta"
+    ],
+    "details.AsyncTaskRunnerTook": [
+      0
+    ],
+    "destination_ip.keyword": [
+      "10.233.74.76"
+    ],
+    "details.Method": [
+      "POST"
+    ],
+    "details.SerTook": [
+      0
+    ],
+    "host.name.keyword": [
+      "laportal-statefulset-0"
+    ],
+    "details.ApiFullName.keyword": [
+      "IUserManagementApi.GetSimpleUsers"
+    ],
+    "details.DestinationService": [
+      "AM"
+    ],
+    "details.ApiFullName": [
+      "IUserManagementApi.GetSimpleUsers"
+    ],
+    "host.hostname": [
+      "laportal-statefulset-0"
+    ],
+    "details.fail": [
+      0
+    ],
+    "host.mac": [
+      "9e:8f:37:0f:82:f2"
+    ],
+    "source_ip": [
+      "10.233.97.174"
+    ],
+    "details.Method.keyword": [
+      "POST"
+    ],
+    "source_ip_chain": [
+      "10.233.75.105, 10.233.97.174"
+    ],
+    "host.os.version": [
+      "20.04.5 LTS (Focal Fossa)"
+    ],
+    "details.TotalNetTook": [
+      10
+    ],
+    "origin_ip.keyword": [
+      "10.233.75.105"
+    ],
+    "source_ip_port": [
+      "10.233.97.174:58982"
+    ],
+    "agent.name": [
+      "laportal-statefulset-0"
+    ],
+    "id": [
+      "de3dbcf6-63dd-43d8-a695-4ff2a0f6b00c"
+    ],
+    "transaction_id": [
+      "765cecd3-b577-4588-b3f1-191ae1835ee5"
+    ],
+    "host.os.type": [
+      "linux"
+    ],
+    "agent.id.keyword": [
+      "ef616235-a2de-404b-b423-179165ce2fc1"
+    ],
+    "input.type": [
+      "log"
+    ],
+    "agent.hostname": [
+      "laportal-statefulset-0"
+    ],
+    "details.RespStatusCode": [
+      200
+    ],
+    "log.flags": [
+      "multiline"
+    ],
+    "tags": [
+      "beats_input_codec_plain_applied"
+    ],
+    "details.process_name.keyword": [
+      "MSSE.LAPortal"
+    ],
+    "host.architecture": [
+      "x86_64"
+    ],
+    "destination_ip_port.keyword": [
+      "10.233.74.76:58084"
+    ],
+    "user_name.keyword": [
+      "2c031bd6-470e-4610-a8cb-3900d510c64d"
+    ],
+    "agent.id": [
+      "ef616235-a2de-404b-b423-179165ce2fc1"
+    ],
+    "host.containerized": [
+      true
+    ],
+    "distributed_transaction_id.keyword": [
+      "753d8e16-304a-4f95-a8c5-c4b44e093a11"
+    ],
+    "input.type.keyword": [
+      "log"
+    ],
+    "user_name": [
+      "2c031bd6-470e-4610-a8cb-3900d510c64d"
+    ],
+    "tags.keyword": [
+      "beats_input_codec_plain_applied"
+    ],
+    "parent_proc": [
+      "f66633c8-f815-40aa-b358-553723bb346a"
+    ],
+    "details.ConectionTook": [
+      0
+    ],
+    "details.service_name.keyword": [
+      "MSSE.LAPortal"
+    ],
+    "details.ReqBytes": [
+      51
+    ],
+    "host.ip": [
+      "10.233.74.76",
+      "fe80::9c8f:37ff:fe0f:82f2"
+    ],
+    "agent.type": [
+      "filebeat"
+    ],
+    "log_type": [
+      "response"
+    ],
+    "token_user_name.keyword": [
+      "2c031bd6-470e-4610-a8cb-3900d510c64d"
+    ],
+    "host.os.kernel.keyword": [
+      "5.4.0-177-generic"
+    ],
+    "log.flags.keyword": [
+      "multiline"
+    ],
+    "details.ApiControllerName": [
+      "IUserManagementApi"
+    ],
+    "origin_ip_port.keyword": [
+      "10.233.75.105:0"
+    ],
+    "timestamp": [
+      "2024-07-23T08:58:56.426Z"
+    ],
+    "agent.type.keyword": [
+      "filebeat"
+    ],
+    "agent.ephemeral_id.keyword": [
+      "9e73798a-6d23-4093-9ec6-7cc2bac3bf12"
+    ],
+    "agent.name.keyword": [
+      "laportal-statefulset-0"
+    ],
+    "host.os.codename": [
+      "focal"
+    ],
+    "details.Url": [
+      "/api/UserManagementApi/GetSimpleUsers"
+    ],
+    "details.full_version": [
+      "403.2.0.10"
+    ],
+    "@timestamp": [
+      "2024-07-23T08:58:56.426Z"
+    ],
+    "host.os.platform": [
+      "ubuntu"
+    ],
+    "log.file.path": [
+      "/var/log/service_logs/laportal-statefulset-0_star/Performance/20240723.json"
+    ],
+    "agent.ephemeral_id": [
+      "9e73798a-6d23-4093-9ec6-7cc2bac3bf12"
+    ],
+    "log_type.keyword": [
+      "response"
+    ],
+    "source_ip_chain.keyword": [
+      "10.233.75.105, 10.233.97.174"
+    ],
+    "details.Url.keyword": [
+      "/api/UserManagementApi/GetSimpleUsers"
+    ],
+    "host.architecture.keyword": [
+      "x86_64"
+    ],
+    "source_ip_port.keyword": [
+      "10.233.97.174:58982"
+    ],
+    "distributed_transaction_id": [
+      "753d8e16-304a-4f95-a8c5-c4b44e093a11"
+    ],
+    "token_user_name": [
+      "2c031bd6-470e-4610-a8cb-3900d510c64d"
+    ],
+    "details.RespBytes": [
+      849
+    ],
+    "agent.hostname.keyword": [
+      "laportal-statefulset-0"
+    ],
+    "ecs.version.keyword": [
+      "1.12.0"
+    ],
+    "host.ip.keyword": [
+      "10.233.74.76",
+      "fe80::9c8f:37ff:fe0f:82f2"
+    ],
+    "destination_ip": [
+      "10.233.74.76"
+    ],
+    "details.activity.keyword": [
+      "StatelessCall"
+    ],
+    "host.os.name": [
+      "Ubuntu"
+    ],
+    "details.DeserTook": [
+      0
+    ],
+    "host.name": [
+      "laportal-statefulset-0"
+    ],
+    "details.ApiName": [
+      "GetSimpleUsers"
+    ],
+    "host.os.version.keyword": [
+      "20.04.5 LTS (Focal Fossa)"
+    ],
+    "fields.Environment": [
+      "qa-beta"
+    ],
+    "details.activity": [
+      "StatelessCall"
+    ],
+    "details.module_name": [
+      "mrpc"
+    ],
+    "source_ip_chain_port": [
+      "10.233.75.105:0, 10.233.97.174:58982"
+    ],
+    "log.offset": [
+      5793482
+    ],
+    "transaction_id.keyword": [
+      "765cecd3-b577-4588-b3f1-191ae1835ee5"
+    ],
+    "process_tag.keyword": [
+      "Client.StatelessCall.Response"
+    ],
+    "details.full_version.keyword": [
+      "403.2.0.10"
+    ],
+    "ecs.version": [
+      "1.12.0"
+    ],
+    "details.ApiControllerName.keyword": [
+      "IUserManagementApi"
+    ],
+    "host.hostname.keyword": [
+      "laportal-statefulset-0"
+    ],
+    "agent.version": [
+      "7.17.9"
+    ],
+    "host.os.family": [
+      "debian"
+    ],
+    "source_ip_chain_port.keyword": [
+      "10.233.75.105:0, 10.233.97.174:58982"
+    ],
+    "details.Command": [
+      "StatelessApiCall"
+    ],
+    "details.process_name": [
+      "MSSE.LAPortal"
+    ],
+    "details.success": [
+      1
+    ],
+    "details.DestinationService.keyword": [
+      "AM"
+    ],
+    "details.area.keyword": [
+      "Client"
+    ],
+    "details.status": [
+      "success"
+    ],
+    "details.module_name.keyword": [
+      "mrpc"
+    ],
+    "id.keyword": [
+      "de3dbcf6-63dd-43d8-a695-4ff2a0f6b00c"
+    ],
+    "host.os.kernel": [
+      "5.4.0-177-generic"
+    ],
+    "@version": [
+      "1"
+    ],
+    "host.os.name.keyword": [
+      "Ubuntu"
+    ],
+    "process_tag": [
+      "Client.StatelessCall.Response"
+    ],
+    "details.ApiName.keyword": [
+      "GetSimpleUsers"
+    ],
+    "log.file.path.keyword": [
+      "/var/log/service_logs/laportal-statefulset-0_star/Performance/20240723.json"
+    ],
+    "host.os.codename.keyword": [
+      "focal"
+    ],
+    "request_id.keyword": [
+      "b884b4ab-8810-46d9-a99d-9075f68c279a"
+    ],
+    "host.mac.keyword": [
+      "9e:8f:37:0f:82:f2"
+    ],
+    "destination_ip_port": [
+      "10.233.74.76:58084"
+    ],
+    "details.Command.keyword": [
+      "StatelessApiCall"
+    ],
+    "details.service_name": [
+      "MSSE.LAPortal"
+    ],
+    "details.major_version": [
+      "403"
+    ],
+    "host.os.family.keyword": [
+      "debian"
+    ],
+    "details.major_version.keyword": [
+      "403"
+    ],
+    "source_ip.keyword": [
+      "10.233.97.174"
+    ],
+    "host.os.type.keyword": [
+      "linux"
+    ],
+    "host.os.platform.keyword": [
+      "ubuntu"
+    ],
+    "parent_proc.keyword": [
+      "f66633c8-f815-40aa-b358-553723bb346a"
+    ],
+    "details.WaitingTook": [
+      9
+    ],
+    "origin_ip_port": [
+      "10.233.75.105:0"
+    ],
+    "details.response_time": [
+      11
+    ],
+    "details.area": [
+      "Client"
+    ],
+    "request_id": [
+      "b884b4ab-8810-46d9-a99d-9075f68c279a"
+    ],
+    "origin_ip": [
+      "10.233.75.105"
+    ]
+  }
+}
+```
+
+در ادامه به هر جیسون مشابه مثال بالا یک لاگ گفته می‌شود و متناظر با یک سند در الستیک‌سرچ است.
+
 
 ### تحلیل لاگ با Discover
 
