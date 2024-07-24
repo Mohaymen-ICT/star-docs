@@ -113,6 +113,58 @@
         آمده است.       
 
 
+    * بررسی وضعیت اندازه‌ی اشاره‌گر‌ها در JVM
+
+        در صورتی که مقدار حافظه‌ی 
+        RAM
+        که به 
+        JVM
+        داده می‌شود خیلی زیاد باشد(بیش از 32 گیگابایت)
+        باعث افزایش اندازه‌ی پوینتر شده و باعث کندی می‌شود.
+
+        ```
+        GET /_nodes/jvm?filter_path=nodes.*.jvm.using_compressed_ordinary_object_pointers
+        ```
+        
+        در صورتی که پاسخ این کوئری 
+        `false`
+        باشد به معنی عدم بهینه‌بودن اندازه‌ی پوینترها است و باید بررسی بشود و این میزان حافظه باید بهتر است بین چند نود تقسیم بشود به جای اینکه یک نود با 
+        RAM
+        بسیار زیاد ایجاد شود.
+        
+
+## بررسی جزئیات کلاستر در کیبانا 
+
+در رابط کاربری گرافیکی کیبانا امکان مشاهده‌ی وضعیت هر نود کلاستر را مشخص می‌کند.
+
+### مشاهده‌ی جزئیات هر نود 
+
+برای مشاهده‌ی جزئیات یک نود در کیبانا مسیر زیر را طی می‌کنیم.
++ در ابتدا وارد 
+Stack Monitoring
+در کیبانا می‌شویم.
++ در بخش
+Elasticsearch
+بخش
+Nodes
+را انتخاب می‌کنیم
++ پس از آن می‌توانیم 
+Node
+مورد نظر را انتخاب می‌کنیم.
++ در این صفحه موارد مختلفی که نشان‌دهنده‌ی وضعیت سیستم است نشان‌داده شده است.
++ در صورت نیاز می‌توان به بخش 
+Advanced
+برویم و جزئیات بیش‌تر و تفاوت‌های رفتار خاص در کلاستر بین نودها قابل مشاهده است.  
+
+
+:::tip
+یکی از مواردی که حائذ اهمیت است میزان تاخیر در پاسخ به درخواست‌های
+Indexing
+و
+Search
+است. در صورتی که در یک نود خاص رفتار به صورت مشخصی با بقیه‌ی آن‌ها متفاوت باشد قابل تامل و بررسی است.
+:::
+
 ## جلسات بررسی تیم فنی
 + [جلسه‌ی اول بررسی روش‌های دیباگ کلاستر الستیک](https://splus.ir/star_learning_dev/286)
 
@@ -122,3 +174,4 @@
 + [Tune for indexing speed](https://www.elastic.co/guide/en/elasticsearch/reference/current/tune-for-indexing-speed.html)
 + [Tune for disk usage](https://www.elastic.co/guide/en/elasticsearch/reference/current/tune-for-disk-usage.html)
 + [Size your shards](https://www.elastic.co/guide/en/elasticsearch/reference/current/size-your-shards.html)
++ [Advanced tuning: finding and fixing slow Elasticsearch queries](https://www.elastic.co/blog/advanced-tuning-finding-and-fixing-slow-elasticsearch-queries)
