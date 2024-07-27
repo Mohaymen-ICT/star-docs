@@ -1,4 +1,4 @@
-# شهبود کلی نسبت به سرویس از طریق dotnet-counters
+# dotnet-counters
 
 یکی از ابزارهایی که برای بررسی وضعیت کلی سرویس ارائه شده 
 `dotnet-counters`
