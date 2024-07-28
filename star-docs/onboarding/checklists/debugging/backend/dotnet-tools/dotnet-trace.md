@@ -51,7 +51,7 @@ dotnet-trace collect -p <PID>
 
 ### استفاده از PerfView
 1. [PerfView را دانلود و نصب کنید](https://github.com/microsoft/perfview/releases).
-2. به بخش Releases بروید و نسخه‌ی آخر را دانلود کنید. معمولاً فایل `PerfView.zip` یا `PerfView.exe` مناسب است.
+2. به بخش Releases بروید و نسخه‌ی آخر را دانلود کنید. فایل `PerfView.exe` را دانلود کنید.
 3. فایل
    `nettrace`
    جمع‌آوری شده را در PerfView باز کنید.
