@@ -102,7 +102,7 @@ const config: Config = {
                     items: [
                         {
                             label: 'درباره‌ی واحد',
-                            to: '/team/about-team',
+                            to: '/team',
                         },
                         {
                             label: 'شروع به کار',
