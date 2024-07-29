@@ -5,11 +5,14 @@
   "websiteTagline": {
     "message": "مستندات ستاره"
   },
-  "onboarding": {
-    "message": "شروع به کار"
+  "people": {
+    "message": "منابع انسانی"
   },
   "aboutTeam": {
     "message": "درباره‌ی واحد"
+  },
+  "engineering": {
+    "message": "مهندسی"
   },
   "documents": {
     "message": "مستندات"

@@ -43,9 +43,17 @@ export default function Home(): ReactElement {
                 <div className={styles.buttons}>
                     <Link
                         className="button button--secondary button--lg"
-                        to="/onboarding/intro"
+                        to="/people/intro"
                     >
-                        <Translate>onboarding</Translate>
+                        <Translate>people</Translate>
+                    </Link>
+                </div>
+                <div className={styles.buttons}>
+                    <Link
+                        className="button button--secondary button--lg"
+                        to="/engineering/intro"
+                    >
+                        <Translate>engineering</Translate>
                     </Link>
                 </div>
                 <div className={styles.buttons}>
