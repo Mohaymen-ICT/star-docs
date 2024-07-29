@@ -35,7 +35,7 @@ export default function Home(): ReactElement {
                 <div className={styles.buttons}>
                     <Link
                         className="button button--secondary button--lg"
-                        to="/team/about-team"
+                        to="/team"
                     >
                         <Translate>aboutTeam</Translate>
                     </Link>
