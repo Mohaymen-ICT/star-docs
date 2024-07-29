@@ -41,10 +41,10 @@ const config: Config = {
         [
             '@docusaurus/plugin-content-docs',
             {
-                id: 'onboarding',
-                path: 'onboarding',
-                routeBasePath: 'onboarding',
-                sidebarPath: './sidebarsOnboarding.ts'
+                id: 'people',
+                path: 'people',
+                routeBasePath: 'people',
+                sidebarPath: './sidebarsPeople.ts'
             }
         ],
         [
@@ -54,6 +54,15 @@ const config: Config = {
                 path: 'documents',
                 routeBasePath: 'documents',
                 sidebarPath: './sidebarsDocuments.ts'
+            }
+        ],
+        [
+            '@docusaurus/plugin-content-docs',
+            {
+                id: 'engineering',
+                path: 'engineering',
+                routeBasePath: 'engineering',
+                sidebarPath: './sidebarsEngineering.ts'
             }
         ],
     ],
@@ -105,8 +114,12 @@ const config: Config = {
                             to: '/team',
                         },
                         {
-                            label: 'شروع به کار',
-                            to: '/onboarding/intro',
+                            label: 'منابع انسانی',
+                            to: '/people/intro',
+                        },
+                        {
+                            label: 'مهندسی',
+                            to: '/engineering/intro',
                         },
                         {
                             label: 'مستندات',
