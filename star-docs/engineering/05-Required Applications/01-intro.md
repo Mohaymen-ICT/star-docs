@@ -6,7 +6,7 @@ Local
 
 - Database
   - Relational
-    - PostgreSQL
+    - [PostgreSQL](./Database/Relational/PostgreSQL)
     - SQLServer
     - Oracle
   - Columnar
