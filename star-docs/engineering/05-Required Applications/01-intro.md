@@ -4,14 +4,14 @@
 Local
 می‌تواند کار توسعه‌دهنده‌ها را بسیار راحت کند. نرم‌افزارهایی که در توسعه‌ی ستاره مورد استفاده قرار می‌گیرند:
 
-- [Database](./Database)
-  - [Relational](./Database/Relational)
+- Database
+  - Relational
     - [PostgreSQL](./Database/Relational/PostgreSQL)
     - SQLServer
     - Oracle
   - Columnar
     - ClickHouse
-  - [NoSQL](Database/NoSQL)
+  - NoSQL
     - Elasticsearch
     - [Redis](./Database/NoSQL/Redis)
 
