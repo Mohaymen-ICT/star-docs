@@ -13,7 +13,7 @@ Local
     - ClickHouse
   - NoSQL
     - Elasticsearch
-    - Redis
+    - [Redis](./Database/NoSQL/Redis)
 
 - Message Queue
   - Kafka
